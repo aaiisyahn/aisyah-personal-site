@@ -1,4 +1,4 @@
-import TombolBeranda from "../../components/tombol-beranda";
+import TombolBeranda from "@/components/tombol-beranda";
 
 export default function TentangPage() {
   return (
