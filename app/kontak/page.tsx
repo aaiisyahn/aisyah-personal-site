@@ -1,4 +1,4 @@
-import TombolBeranda from "../TombolBeranda";
+import TombolBeranda from "@/components/tombol-beranda";
 
 export default function KontakPage() {
   return (
