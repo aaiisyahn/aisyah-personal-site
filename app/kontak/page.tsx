@@ -1,3 +1,5 @@
+import TombolBeranda from "@/components/tombol-beranda";
+
 export default function KontakPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#fdf8f8] px-6 py-12">
@@ -28,6 +30,7 @@ export default function KontakPage() {
             <p className="mt-2 text-sm text-[#493b3e]">linkedin.com/in/aisyahna/</p>
           </div>
         </div>
+        <TombolBeranda />
       </section>
     </main>
   );

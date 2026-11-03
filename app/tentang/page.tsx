@@ -1,3 +1,5 @@
+import TombolBeranda from "@/components/tombol-beranda";
+
 export default function TentangPage() {
   return (
     <main className="flex flex-1 items-center justify-center bg-[#fdf8f8] px-6 py-12">
@@ -29,6 +31,7 @@ export default function TentangPage() {
         </div>
 
         <p className="mt-10 text-xs text-[#b69da2]">Nice to meet you!</p>
+        <TombolBeranda />
       </section>
     </main>
   );
