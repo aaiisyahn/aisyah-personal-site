@@ -1,15 +1,17 @@
+import LikeButton from "./like-button";
+
 const posts: Record<string, { title: string; content: string }> = {
-  "belajar-nextjs": {
+  "learning-nextjs": {
     title: "Learning Next.js",
     content:
       "I am learning how to build web applications with Next.js. So far, I have explored pages, layouts, dynamic routes, and reusable components. Each new concept helps me understand how modern websites are structured.",
   },
-  "hal-baru": {
+  "things-ive-learned": {
     title: "Things I've Learned",
     content:
       "One thing I have learned is that building an application takes more than writing code. Understanding the structure, organizing components, and paying attention to the user experience are just as important.",
   },
-  "target-tahun-ini": {
+  "my-goals-this-year": {
     title: "My Goals This Year",
     content:
       "This year, I want to keep improving my programming skills, explore web development, and build more projects for my portfolio. My goal is to become a better developer by learning consistently and putting new knowledge into practice.",
@@ -33,6 +35,9 @@ export default async function TulisanPage({ params }: { params: Promise<{ slug: 
           <p className="text-sm leading-7 text-[#827477]">
             {post?.content ?? "This article is coming soon."}
           </p>
+        </div>
+        <div className="mt-6">
+          <LikeButton slug={slug} />
         </div>
       </article>
     </main>
