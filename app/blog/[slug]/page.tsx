@@ -1,4 +1,4 @@
-import LikeButton from "./like-button";
+import LikeButton from "./_components/like-button";
 
 const posts: Record<string, { title: string; content: string }> = {
   "learning-nextjs": {
