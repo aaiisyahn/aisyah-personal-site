@@ -1,16 +1,16 @@
-import Link from "next/link";
+import DaftarTulisan from "./_components/daftar-tulisan";
 
 const posts = [
   {
-    slug: "belajar-nextjs",
+    slug: "learning-nextjs",
     title: "Learning Next.js",
   },
   {
-    slug: "hal-baru",
+    slug: "things-ive-learned",
     title: "Things I've Learned",
   },
   {
-    slug: "target-tahun-ini",
+    slug: "my-goals-this-year",
     title: "My Goals This Year",
   },
 ];
@@ -27,23 +27,7 @@ export default function BlogPage() {
           </h1>
         </header>
 
-        <div className="mt-8 border-t border-[#e8c6cc]">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group flex items-center justify-between gap-4 border-b border-[#f1e4e5] py-5"
-            >
-              <span className="text-sm font-medium text-[#493b3e] transition-colors group-hover:text-[#bd8994] sm:text-base">
-                {post.title}
-              </span>
-
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#fdf8f8] text-[#bd8994] transition-colors group-hover:bg-[#f1e4e5]">
-                <span aria-hidden="true">↗</span>
-              </span>
-            </Link>
-          ))}
-        </div>
+        <DaftarTulisan daftar={posts} />
       </section>
     </main>
   );
