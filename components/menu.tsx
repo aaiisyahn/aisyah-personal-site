@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useFavorit } from "@/context/favorit-context";
 
 export default function Menu() {
   const pathname = usePathname();
+  const { daftar } = useFavorit();
 
   const links = [
     { href: "/", label: "Beranda" },
@@ -41,6 +43,10 @@ export default function Menu() {
             </Link>
           );
         })}
+
+         <span className="text-sm font-medium text-[#827477]">
+    Favorit: {daftar.length}
+  </span>
       </div>
     </nav>
   );
