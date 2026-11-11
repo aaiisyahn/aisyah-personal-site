@@ -1,4 +1,5 @@
 import LikeButton from "./_components/like-button";
+import TombolFavorit from "@/components/tombol-favorit";
 
 const posts: Record<string, { title: string; content: string }> = {
   "learning-nextjs": {
@@ -36,8 +37,9 @@ export default async function TulisanPage({ params }: { params: Promise<{ slug: 
             {post?.content ?? "This article is coming soon."}
           </p>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <LikeButton slug={slug} />
+          <TombolFavorit slug={slug} />
         </div>
       </article>
     </main>
