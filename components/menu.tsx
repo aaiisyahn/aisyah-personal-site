@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useFavorit } from "@/context/favorit-context";
+import { useFavorit } from "@/store/use-favorit";
 
 export default function Menu() {
   const pathname = usePathname();
   const { daftar } = useFavorit();
+  const jumlahFavorit = daftar.length;
 
   const links = [
     { href: "/", label: "Beranda" },
@@ -44,9 +45,7 @@ export default function Menu() {
           );
         })}
 
-         <span className="text-sm font-medium text-[#827477]">
-    Favorit: {daftar.length}
-  </span>
+        <span className="text-sm font-medium text-[#827477]">Favorit: {jumlahFavorit}</span>
       </div>
     </nav>
   );
